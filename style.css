@@ -1,0 +1,92 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.link-highlight{
+    text-decoration: none;
+    color: white;
+    background-color: #E76F51;
+    font-weight: 600;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+#login-btn{
+    font-weight: 900;
+    font-size: 25px;
+    margin-left: 190px;
+}
+#forgot-password{
+text-decoration: none;
+color: black;
+}
+/* font awesome style */
+.fab.fa-facebook-square, .fab.fa-linkedin{
+    color: blue;
+    font-size: 35px;
+}
+.fab.fa-instagram-square{
+    color: crimson;
+    font-size: 35px;
+}
+.top-bg-color{
+    background-color: #264653;
+}
+.nav-link{
+    color: white;
+}
+h1{
+    font-weight: 600;
+}
+p, .card-body{
+    color: gray;
+}
+.text-highlight{
+    color: #E76F51;
+    font-weight: 500;
+}
+.read-more-btn{
+    background-color: #E76F51;
+}
+.grayscale{
+    filter: grayscale(100%);
+}
+.featured-bikes-img{
+    width: 75%;
+}
+.clients-img{
+    width: 35%;
+}
+#client-3-img{
+    width: 40%;
+}
+.fas.fa-star, .far.fa-star{
+    color: #E76F51;
+}
+.blue-color{
+    color: #23A6F0;
+}
+.cards{
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 478px;
+    width: 322px;
+    padding: 40px 35px;
+}
+/*---------------------------------------------------------------------------------------------------------
+ for some reason second and third card's left border is auto erasing, also class isn't working but id does
+ ---------------------------------------------------------------------------------------------------------- */
+#card-2, #card-3, #card-4, #card-5{
+    border: 1px solid #DEDEDE;
+}
+.card{
+    border: 1px solid #DEDEDE;
+}
+.footer-nav{
+    border: 1px solid white;
+}
+.dark-bg{
+    background-color: #0B0D17;
+}
+.fas.fa-fire-alt{
+    color: crimson;
+}

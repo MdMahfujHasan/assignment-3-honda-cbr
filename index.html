@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/b00c7b5e8f.js" crossorigin="anonymous"></script>
+    <title>Honda CBR</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- header section -->
+        <section class="top-bg-color py-5">
+            <nav class="navbar navbar-expand-lg navbar-light top-bg-color">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav container d-flex justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light me-2" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light me-2" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light me-2" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light me-5" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active text-light link-highlight px-5"
+                                data-bs-toggle="modal" data-bs-target="#LoginModal"
+                                data-bs-whatever="@getbootstrap">Login</button>
+
+                            <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 id="login-btn" class="modal-title" id="exampleModalLabel">Login
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="user-name" class="col-form-label"><i
+                                                            class="fas fa-user-circle"></i> User Name:</label>
+                                                    <input type="text" class="form-control" id="user-name"
+                                                        placeholder="Type Your User Name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="user-password" class="col-form-label"><i
+                                                            class="fas fa-lock"></i> Password:</label>
+                                                    <input type="password" class="form-control" id="user-password"
+                                                        placeholder="Type Your Password"></input>
+                                                    <div class="mt-2 d-flex justify-content-end">
+                                                        <a id="forgot-password" href="#">Forgot Password?</a>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                        <a href="#"><i class="fab fa-instagram-square mx-3"></i></a>
+                                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Login</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active btn-dark text-light px-5 ms-1"
+                                data-bs-toggle="modal" data-bs-target="#SignUpModal"
+                                data-bs-whatever="@getbootstrap">Sign Up</button>
+
+                            <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 id="login-btn" class="modal-title" id="exampleModalLabel">Sign Up
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="first-name" class="col-form-label">First Name:</label>
+                                                    <input type="text" class="form-control" id="first-name"
+                                                        placeholder="Your First Name">
+                                                </div>
+                                                <label for="last-name" class="col-form-label">Last Name:</label>
+                                                <input type="text" class="form-control" id="last-name"
+                                                    placeholder="Your Last Name">
+                                                <label for="last-name" class="col-form-label">Email:</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="Your Email">
+                                                <div class="mb-3"><label for="password" class="col-form-label">
+                                                        Password:</label>
+                                                    <input type="confirm-password" class="form-control" id="password"
+                                                        placeholder="Type Password"></input>
+                                                </div>
+                                                <div class="mb-3"><label for="password" class="col-form-label">
+                                                        Confirm Password:</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        placeholder="Confirm Password"></input>
+                                                </div>
+                                                <div class="mb-3"></div>
+                                                <div class="d-flex justify-content-center">
+                                                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                                                    <a href="#"><i class="fab fa-instagram-square mx-3"></i></a>
+                                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                                </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-warning">Sign Up</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                </li>
+                </ul>
+                </div>
+            </nav>
+            <div class="container d-flex justify-content-evenly align-items-center row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, harum!</p>
+                    <h1 class="text-light">Honda CBR 300R</h1>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. In omnis esse qui
+                        dolorum, et cumque
+                        soluta est, recusandae quaerat pariatur assumenda laudantium corporis dolore ipsam quae
+                        doloribus, sint aspernatur magni?</p>
+                    <br>
+                    <!-- modal -->
+                    <button type="button" class="link-highlight" data-bs-toggle="modal" data-bs-target="#PurchaseModal"
+                        data-bs-whatever="@mdo">Purchase</button>
+
+                    <div class="modal fade" id="PurchaseModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Confirm Purchase</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="name" class="col-form-label">Name:</label>
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="email" class="col-form-label">Email:</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Your Email">
+                                            <label for="password" class="col-form-label">Password:</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Your Password">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-">
+                    <img class="img-fluid mt-5 mt-sm-5" src="images/header-bike.png" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- featured bikes section -->
+        <section class="container mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="mb-5">
+                    <h1>Featured Bikes 2021</h1>
+                    <p class="text-highlight d-flex justify-content-center">Best bike collection</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between row ms-5">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-5 mt-sm-5">
+                    <img class="grayscale img-fluid featured-bikes-img" src="images/feature-bike.jpg" alt="">
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-5 mt-sm-5">
+                    <img class="img-fluid featured-bikes-img" src="images/feature-bike.jpg" alt="">
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-5 mt-sm-5">
+                    <img class="grayscale img-fluid featured-bikes-img" src="images/feature-bike.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- latest news section -->
+        <section class="container mt-5">
+            <h1 class="d-flex justify-content-center mb-5">Latest News</h1>
+            <div class="card-group row">
+                <div class="card img-thumbnail rounded p-3 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <img src="images/bike-3.png" class="card-img-top" alt="Ducati XDIAVEL S-73">
+                    <div class="card-body">
+                        <h4 class="card-title text-dark">Ducati XDIAVEL S-73</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum
+                            obcaecati repudiandae sed officia ullam, illo impedit at placeat quod, enim consequuntur
+                            aperiam a dolores est quaerat ratione temporibus explicabo!</p>
+                        <button class="btn btn-outline-dark">Read More</button>
+                    </div>
+                </div>
+                <div id="card-4"
+                    class="card mx-5 img-thumbnail rounded p-3 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <img src="images/bike-4.jpg" class="card-img-top" alt="Motorcycles & Scooters">
+                    <div class="card-body">
+                        <h4 class="card-title text-dark">Motorcycles & Scooters</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum
+                            obcaecati repudiandae sed officia ullam, illo impedit at placeat quod, enim consequuntur
+                            aperiam a dolores est quaerat ratione temporibus explicabo!</p>
+                        <button class="btn btn-outline-dark">Read More</button>
+                    </div>
+                </div>
+                <div id="card-5" class="card img-thumbnail rounded p-3 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                    <img src="images/bike-3.png" class="card-img-top" alt="Ducati XDIAVEL S-73">
+                    <div class="card-body">
+                        <h4 class="card-title text-dark">2021 Honda CBR500R</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolorum
+                            obcaecati repudiandae sed officia ullam, illo impedit at placeat quod, enim consequuntur
+                            aperiam a dolores est quaerat ratione temporibus explicabo!</p>
+                        <button class="btn btn-outline-dark">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- happy clients says section -->
+        <!------------------------------------------------
+            don't know why the grid is not working here...
+         ------------------------------------------------>
+        <section class="container">
+            <div class="d-flex justify-content-center my-5">
+                <h1>Happy<span class="text-highlight"> Clients says</span></h1>
+            </div>
+
+            <div class="card-group d-flex justify-content-around row">
+                <div class="card col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 rounded-3 w-25 cards ms-5">
+                    <img class="img-fluid clients-img mx-auto" src="images/user.png" class="card-img-top" alt="user">
+                    <div class="card-body">
+                        <p class="d-flex justify-content-center">Slate helps you see how many more days you need to work
+                            to reach your financial goal for the
+                            month and year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+                            accusamus.
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <br>
+                        <b class="d-flex justify-content-center blue-color">Regina Miles</b>
+                        <br>
+                        <b class="d-flex justify-content-center">Banker</b>
+                    </div>
+                </div>
+                <div id="card-2" class="card col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 rounded-3 w-25 cards ms-5">
+                    <img class="img-fluid clients-img mx-auto" src="images/user.png" class="card-img-top" alt="user">
+                    <div class="card-body">
+                        <p class="d-flex justify-content-center">Slate helps you see how many more days you need to
+                            work
+                            to reach your financial goal for the
+                            month and year. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, doloribus.
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <br>
+                        <b class="d-flex justify-content-center blue-color">Regina Miles</b>
+                        <br>
+                        <b class="d-flex justify-content-center">Banker</b>
+                    </div>
+                </div>
+                <div id="card-3" class="card col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 rounded-3 w-25 cards ms-5">
+                    <img class="img-fluid clients-img mx-auto" src="images/user.png" class="card-img-top" alt="user">
+                    <div class="card-body">
+                        <p class="d-flex justify-content-center">Slate helps you see how many more days you need to work
+                            to reach your financial goal for the
+                            month and year. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, nihil.
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <br>
+                        <b class="d-flex justify-content-center blue-color">Regina Miles</b>
+                        <br>
+                        <b class="d-flex justify-content-center">Banker</b>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- frequently asked questions section -->
+        <section class="container">
+            <div class="d-flex justify-content-center my-5">
+                <h1>Frequently Asked<span class="text-highlight"> Questions</span></h1>
+            </div>
+
+            <div class="row d-flex mx">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <img class="img-fluid" src="images/faq.png" alt="">
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 align-self-center">
+                    <div>
+                        <p>
+                            <button class="btn card d-flex" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapseExample">
+                                <b>What are the most important things I should know about riding a bike?</b>
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="collapse" id="collapse-1">
+                                    <div class="card-body">
+                                        Safety First! Always obey the rules of the road. Obey all traffic
+                                        signals, signs, and laws. Get in the mindset of “driving” your
+                                        bike—not just “riding” your bike. This will help you be a more
+                                        focused and legally compliant bike rider.
+                                    </div>
+                                </div>
+                            </button>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            <button class="btn card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-2" aria-expanded="false"
+                                aria-controls="collapseExample"><b>What
+                                    are the most important things I should know about riding a bike?</b>
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="collapse" id="collapse-2">
+                                    <div class="card-body">
+                                        Safety First! Always obey the rules of the road. Obey all traffic
+                                        signals, signs, and laws. Get in the mindset of “driving” your
+                                        bike—not just “riding” your bike. This will help you be a more
+                                        focused and legally compliant bike rider.
+                                    </div>
+                                </div>
+                            </button>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            <button class="btn card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-3" aria-expanded="false"
+                                aria-controls="collapseExample"><b>What
+                                    are the most important things I should know about riding a bike?</b>
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="collapse" id="collapse-3">
+                                    <div class="card-body">
+                                        Safety First! Always obey the rules of the road. Obey all traffic
+                                        signals, signs, and laws. Get in the mindset of “driving” your
+                                        bike—not just “riding” your bike. This will help you be a more
+                                        focused and legally compliant bike rider.
+                                    </div>
+                                </div>
+                            </button>
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            <button class="btn card" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse-4" aria-expanded="false"
+                                aria-controls="collapseExample"><b>What
+                                    are the most important things I should know about riding a bike?</b>
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="collapse" id="collapse-4">
+                                    <div class="card-body">
+                                        Safety First! Always obey the rules of the road. Obey all traffic
+                                        signals, signs, and laws. Get in the mindset of “driving” your
+                                        bike—not just “riding” your bike. This will help you be a more
+                                        focused and legally compliant bike rider.
+                                    </div>
+                                </div>
+                            </button>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- bonus section 1 -->
+        <section class="container mt-5">
+            <div class="d-flex justify-content-center my-5">
+                <h1>Our<span class="text-highlight"> <i class="fas fa-fire-alt"></i> Hottest <i
+                            class="fas fa-fire-alt"></i>
+                    </span> Rides</h1>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-fluid" src="images/bike-1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="images/bike-2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="images/bike-1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-fluid" src="images/bike-2.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- bonus section 2 -->
+        <section class="container mt-5">
+            <div class="d-flex justify-content-center my-5">
+                <h1>Never Miss a Thing!...<span class="text-highlight"> Get Notified</span></h1>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Your Name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Your Email" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Your Password"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Confirm Password"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+            <div class="d-flex gap-3">
+                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- footer section -->
+        <section class="dark-bg d-flex justify-content-between px-5 py-5 row mt-5">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="d-flex">
+                    <a class="text-light text-decoration-none" href="#">Download Now</a>
+                    <a class="text-light text-decoration-none ms-3" href="#">License</a>
+                </div>
+                <div class="d-flex d-flex justify-content-start">
+                    <a class="text-light text-decoration-none" href="#">About</a>
+                    <a class="text-light text-decoration-none ms-2" href="#">Features</a>
+                    <a class="text-light text-decoration-none ms-2" href="#">Pricing</a>
+                    <a class="text-light text-decoration-none ms-2" href="#">Careers</a>
+                    <a class="text-light text-decoration-none ms-2" href="#">Help</a>
+                    <a class="text-light text-decoration-none ms-2" href="#">Privacy Policy</a>
+                </div>
+                <br>
+                <div>
+                    <p class="text-light">© 2020 bike. All rights reserved.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <a class="text-light text-decoration-none" href="#">Get the App</a>
+                <nav class="navbar navbar-light dark-bg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img class="rounded footer-nav" src="images/app-store.png" alt="" width="135" height="40"
+                                class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img class="rounded footer-nav" src="images/google-play.png" alt="" width="135" height="40"
+                                class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+    </footer>
+
+    <!-- link bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
